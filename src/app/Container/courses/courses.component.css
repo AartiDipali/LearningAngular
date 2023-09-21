@@ -1,0 +1,9 @@
+div div.card{
+    display: inline-flex;
+    padding: 10px;
+}
+
+img{
+    height: 200px;
+    width: 300px;
+}

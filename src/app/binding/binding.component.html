@@ -1,0 +1,186 @@
+<!--1)Property Binding-->
+
+<!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Syntax>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+<!-- <div [hidden]="hinndenProp" style="margin-top: 90px;background-color: bisque;height: 300px;;">
+    <p>Hide Me on Hidden Property True</p>
+</div>
+<div bind-hidden="hinndenProp" style="margin-top: 90px;background-color: bisque;height: 300px;;">
+    <p>Hide Me on Hidden Property True</p>
+</div>
+<div [attr.aria-hidden]="hinndenProp" style="margin-top: 90px;background-color: bisque;height: 300px;;">
+    <p>Hide Me on Hidden Property True</p>
+</div> -->
+
+<!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Interpolation VS Property Binding>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+<!-- //Interpolation used to bind dynamic value in view
+//Property Binding is used to bind dynamic data to html attribute in view template. -->
+<!-- <div class="Site-image">
+     <img src="/assets/images.jpg"> -->
+<!--<img [src]="source" [alt]="dynAltTitle"/>-->
+<!--Using interpolation-->
+<!-- <img src="{{source}}"> 
+    Here disabled,hidden,checked not worked on interpolation -->
+<!--<input type="text" [placeholder]="Bind" [id]="something"/> 
+</div>-->
+
+
+<!--Property Binding real time example>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+<!-- <input type="checkbox"  [checked]="defaultchecked" (change)="ShowDiv($event)"/> -->
+<!-- <div class="container d-flex justify-content-center mt-50 mb-50">
+
+    <div class="row">
+        <div class="col-md-4 mt-2" [hidden]="showFirstDiv">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-img-actions">
+                        <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1562074043/234.png"
+                            class="card-img img-fluid" width="96" height="350" alt="">
+
+                    </div>
+                </div>
+
+                <div class="card-body bg-light text-center">
+                    <div class="mb-2">
+                        <h6 class="font-weight-semibold mb-2">
+                            <a href="#" class="text-default mb-2" data-abc="true">Toshiba Notebook with 500GB HDD & 8GB
+                                RAM</a>
+                        </h6>
+
+                        <a href="#" class="text-muted" data-abc="true">Laptops & Notebooks</a>
+                    </div>
+
+                    <h3 class="mb-0 font-weight-semibold">$250.99</h3>
+
+                    <div>
+                        <i class="fa fa-star star"></i>
+                        <i class="fa fa-star star"></i>
+                        <i class="fa fa-star star"></i>
+                        <i class="fa fa-star star"></i>
+                    </div>
+
+                    <div class="text-muted mb-3">34 reviews</div>
+
+                    <button type="button" class="btn bg-cart"><i class="fa fa-cart-plus mr-2"></i> Add to cart</button>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mt-2">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-img-actions">
+
+                        <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1562074043/234.png"
+                            class="card-img img-fluid" width="96" height="350" alt="">
+
+
+                    </div>
+                </div>
+
+                <div class="card-body bg-light text-center">
+                    <div class="mb-2">
+                        <h6 class="font-weight-semibold mb-2">
+                            <a href="#" class="text-default mb-2" data-abc="true">Toshiba Notebook with 500GB HDD & 8GB
+                                RAM</a>
+                        </h6>
+
+                        <a href="#" class="text-muted" data-abc="true">Laptops & Notebooks</a>
+                    </div>
+
+                    <h3 class="mb-0 font-weight-semibold">$250.99</h3>
+
+                    <div>
+                        <i class="fa fa-star star"></i>
+                        <i class="fa fa-star star"></i>
+                        <i class="fa fa-star star"></i>
+                        <i class="fa fa-star star"></i>
+                    </div>
+
+                    <div class="text-muted mb-3">34 reviews</div>
+
+                    <button type="button" class="btn bg-cart" [disabled]="!inStock"><i class="fa fa-cart-plus mr-2"></i> Add to cart</button>
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-4 mt-2">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-img-actions">
+
+                        <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1562074043/234.png"
+                            class="card-img img-fluid" width="96" height="350" alt="">
+
+
+                    </div>
+                </div>
+
+                <div class="card-body bg-light text-center">
+                    <div class="mb-2">
+                        <h6 class="font-weight-semibold mb-2">
+                            <a href="#" class="text-default mb-2" data-abc="true">Toshiba Notebook with 500GB HDD & 8GB
+                                RAM</a>
+                        </h6>
+
+                        <a href="#" class="text-muted" data-abc="true">Laptops & Notebooks</a>
+                    </div>
+
+                    <h3 class="mb-0 font-weight-semibold">$250.99</h3>
+
+                    <div>
+                        <i class="fa fa-star star"></i>
+                        <i class="fa fa-star star"></i>
+                        <i class="fa fa-star star"></i>
+                        <i class="fa fa-star star"></i>
+                    </div>
+
+                    <div class="text-muted mb-3">34 reviews</div>
+
+                    <button type="button" class="btn bg-cart"><i class="fa fa-cart-plus mr-2"></i> Add to cart</button>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!--Event Binding-->
+<!-- <div id="SearchDiv">
+    <label>Search:</label>
+    <input type="text" (input)="SetValue($event)"/>
+    <p>The data is {{SetValuetodiv}}</p>
+</div> -->
+
+<!--Two Way Data Binding-->
+<!-- <input type="text" [(ngModel)]="twowayName" />
+
+Name is:{{twowayName}}
+<input type="checkbox" [(ngModel)]="isChecked" />
+
+Checked Value is:{{isChecked}}
+
+<input type="radio" [(ngModel)]="isradioButton" value="Male"/>
+<input type="radio" [(ngModel)]="isradioButton" value="Female"/>
+
+Value is:{{isradioButton}} -->
+
+
+<!--View child...............................................................................-->
+
+<div class="container">
+    <div>
+        <label>DOB:</label>
+        <input type="date" #dobInput (blur)="CalculateAge()"/>
+    </div>
+    <div>
+        <label>Age:</label>
+        <input type="text" #ageInput/>
+    </div>
+</div>

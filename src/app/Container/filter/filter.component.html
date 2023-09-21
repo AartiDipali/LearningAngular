@@ -1,0 +1,16 @@
+<div class="container">
+    ​  <form>
+        <label class="radio-inline">
+          <input type="radio" name="optradio"  value="All" [(ngModel)]="selectedRadioButtonValue" (change)="OnRadioSelectionChange()">
+          <span>{{'All Courses('+all+')'}}</span>
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" value="Free" [(ngModel)]="selectedRadioButtonValue" (change)="OnRadioSelectionChange()">
+          <span>{{'Free Courses('+free+')'}}</span>
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" value="Premium" [(ngModel)]="selectedRadioButtonValue" (change)="OnRadioSelectionChange()">
+          <span>{{'Premium Courses('+premium+')'}}</span>
+        </label>
+      </form>
+</div>

@@ -1,0 +1,179 @@
+<!-- <div class="container">
+<div class="form-group">
+    <div class="row">
+    <div class="col-md-6">
+    <label for="usr">Name:</label>
+    <input type="text" #enetredValue class="form-control" id="usr">
+    </div>
+    
+    <div class="col-md-6 mt-6">
+    <button type="button" class="btn btn-success" (click)="GetUser(enetredValue)">Create User</button>
+   </div>
+   </div>
+  </div>
+  <br/> -->
+  <!--Display array data-->
+  <!-- <div class="container">
+    <table class="table">
+      <thead>
+        <tr>
+        <th>User</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of Users;index as i">
+        <td>{{user}}</td>
+        <td><button type="button" class="btn btn-warning" (click)="Remove(i)">X</button></td>
+      </tr>
+
+    </tbody>
+      
+      
+    </table>
+</div>
+<br/>
+</div> -->
+
+<!--TrackBy-->
+<!-- <table class="table">
+  <thead>
+    <tr>
+    <th>name</th>
+    <th>Email</th>
+    
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let data of moviesArr;index as i;trackBy:LoadMoreDataTrackBy">
+    <td>{{data.id}}</td>
+    <td>{{data.title}}</td> 
+    
+ 
+  </tr>
+  <button type="button" class="btn btn-warning" (click)="LoadMoreData()">Load More</button>
+</tbody>
+  
+  
+</table>-->
+<!--Ng Switch Case-->
+<!-- <div [ngSwitch]="SuperPower">
+ <div *ngSwitchCase="'WonderWoman'">WonderWoman diplay</div>
+ <div *ngSwitchCase="'WonderMan'">WonderMan display</div>
+ <div *ngSwitchDefault>No display</div>
+</div> -->
+
+<!-- <div *ngFor="let peoples of people">
+  <li *ngIf="peoples.country=='MARS'" class="text-success">{{ peoples.name }} ({{ peoples.country }})</li>
+</div>  -->
+
+<!--using ng switch-->
+<!-- <div *ngFor="let peoples of people">
+  <div [ngSwitch]="peoples.country">
+    <p  *ngSwitchCase="'MARS'"><span style='color:#0f9d58'>Mars:</span>
+      <p  *ngSwitchCase="'USA'"><span style='color:red'>Mars:</span>
+        <p  *ngSwitchCase="'HK'"><span style='color:blue'>Mars:</span>
+          <p  *ngSwitchCase="'IND'"><span style='color:purple'>Mars:</span>
+  </div>
+</div> -->
+
+<!--[class]-->
+
+<!-- using [class.classname] using this we can able to apply only one class -->
+<!-- <div class="container mt-6">
+  <div class="employee">
+    <div class="card col-md-4" [class.red]="employee.priority=='low'">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><button class="btn btn-light" [class.active]="employee.active">{{employee.active?'Active':'InActive'}}</button></h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+
+<!--[style.cssstyle]-->
+
+<!-- <div class="container mt-6">
+  <div class="employee">
+    <div class="card col-md-4">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><button class="btn btn-light" [style.color]="employee.active?'green':'red'">{{employee.active?'Active':'InActive'}}</button></h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+</div>-->
+
+<!-- [ngClass] -we can add multiple class on element using this -->
+<!-- <div class="container mt-6">
+  <div class="employee">
+    <div class="card col-md-4">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">
+           <button class="btn btn-light" [ngClass]="{
+            'active':employee.active,
+            'inactive':!employee.active
+          }"
+          >{{employee.active?'Active':'InActive'}}</button></h5>
+          <button class="btn btn-light" [ngClass]="ClassExp"
+          >{{employee.active?'Active':'InActive'}}</button>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+<div class="container mt-6">
+  <div class="employee">
+    <div class="card col-md-4">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+          <!-- <button class="btn btn-light" [ngStyle]="{
+            'color':'red',
+            'background-color':'gray'
+          }"
+          >{{employee.active?'Active':'InActive'}}</button> -->
+
+          <button class="btn btn-light" [ngStyle]="styles"
+          >{{employee.active?'Active':'InActive'}}</button>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container mt-6">
+  <div class="employee">
+    <div class="card col-md-4" [ngStyle]="{
+      'opacity':employee.active?10:.5,
+      'background-color':employee.priority=='High'?'red':'green'
+    }">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+          <button class="btn btn-light"
+          >{{employee.active?'Active':'InActive'}}</button>
+
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+</div>

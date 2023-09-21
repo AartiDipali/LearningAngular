@@ -6,18 +6,34 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './Container/header/header.component';
 import { NavbarComponent } from './Container/navbar/navbar.component';
 import { containerComponent} from './Container/container.component';
+import { BindingComponent } from './binding/binding.component';
+import { FormsModule } from '@angular/forms';
+import { SearchComponent } from './Container/search/search.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { ProductComponent } from './Container/product/product.component';
+import { CoursesComponent } from './Container/courses/courses.component';
+import { FilterComponent } from './Container/filter/filter.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     NavbarComponent,
-    containerComponent
+    containerComponent,
+    BindingComponent,
+    SearchComponent,
+    DirectivesComponent,
+    ProductComponent,
+    CoursesComponent,
+    FilterComponent,
+    
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

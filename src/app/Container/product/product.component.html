@@ -1,0 +1,101 @@
+<!-- <div class="container mt-4">
+  
+    <h1></h1>
+    
+    <table class="table table-bordered">
+      <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description/th>
+            <th>Price</th>
+            <th>ImageUrl</th>
+            <th>Quantity</th>
+            
+          </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of productList;index as i">
+          <th scope="row">{{i}}</th>
+          <td>{{ product.name }}</td>
+          <td>{{ product.description}}</td>
+          <td>{{ product.price }}</td>
+          <td>{{ product.imageUrl }}</td>
+          <td>{{ product.quantity }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div> -->
+  <!-- <div ">
+  <div class="height d-flex align-items-center" >
+    <div class="card p-3">*ngFor="let P in productList
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="mt-2">
+                <h4 class="text-uppercase">{{p.Name}}</h4>
+                <div class="mt-5">
+                    <span>{{p.price}}</span>
+                    <span>{{p.quantity}}</span>
+                </div>
+            </div>
+            <div class="image">
+                <img src="{{p.imageUrl}}" width="200">
+            </div>
+        </div>
+        <p>{{p.description}} </p>
+        
+        <button class="btn btn-danger">Add to cart</button>
+        <button class="btn btn-Sucess">Buy Now</button>
+    </div>
+    </div>
+</div> -->
+
+<div class="container mt-5">
+  <div class="row">
+<div class="col-lg-4">
+  <div class="card" *ngFor="let product of productList" style="width: 18rem;">
+    <img class="card-img-top" [src]="product.imageUrl" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{product.name}}</h5>
+      <p class="card-text">{{product.description}}</p>
+     Price: <span>{{product.price}}</span>
+      <br/>
+      Quantity:<span>{{product.quantity}}</span>
+      <br/>
+      <div *ngIf="product.inStock!='yes';then elseblock">
+      <button class="btn btn-danger">Add to cart</button>
+      </div>
+      <ng-template #elseblock>
+        <button class="btn btn-danger">Out Of Stock</button>
+      </ng-template>
+      <button class="btn btn-warning">Buy Now</button>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+<!-- 
+  <div class="container mt-5 mb-5">
+    <div class="d-flex justify-content-center row">
+        <div class="col-md-10">
+            <div class="row p-2 bg-white border rounded" *ngFor="let product of productList">
+                <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" [src]="product.imageUrl"></div>
+                <div class="col-md-6 mt-1">
+                    <h5>Quant olap shirts</h5>
+                    <div class="d-flex flex-row">
+                        <div class="ratings mr-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div><span>310</span>
+                    </div>
+                    <div class="mt-1 mb-1 spec-1"><span>100% cotton</span><span class="dot"></span><span>Light weight</span><span class="dot"></span><span>Best finish<br></span></div>
+                    <div class="mt-1 mb-1 spec-1"><span>Unique design</span><span class="dot"></span><span>For men</span><span class="dot"></span><span>Casual<br></span></div>
+                    <p class="text-justify text-truncate para mb-0">{{product.description}}<br><br></p>
+                </div>
+                <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+                    <div class="d-flex flex-row align-items-center">
+                        <h4 class="mr-1">$13.99</h4><span class="strike-text">$20.99</span>
+                    </div>
+                    <h6 class="text-success">Free shipping</h6>
+                    <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm" type="button">Details</button><button class="btn btn-outline-primary btn-sm mt-2" type="button">Add to wishlist</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
